@@ -22,13 +22,35 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android SDK Platform 34 & Build-Tools 34.0.0
+      - name: Verify and Setup Android SDK
         run: |
-          yes | sdkmanager --licenses || true
-          sdkmanager "platforms;android-34" "build-tools;34.0.0"
+          echo "Using preinstalled Android SDK at: $ANDROID_HOME"
+
+          # Locate sdkmanager in cmdline-tools
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SDKMANAGER" ]; then
+            SDKMANAGER=$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -perm -u+x 2>/dev/null | head -n 1)
+          fi
+          echo "sdkmanager located at: $SDKMANAGER"
+
+          # Accept SDK licenses
+          yes | "$SDKMANAGER" --licenses || true
+
+          # Check platform 34
+          if [ ! -d "$ANDROID_HOME/platforms/android-34" ]; then
+            echo "Installing platforms;android-34..."
+            "$SDKMANAGER" "platforms;android-34"
+          else
+            echo "platforms;android-34 is already preinstalled."
+          fi
+
+          # Check build-tools 34.0.0
+          if [ ! -d "$ANDROID_HOME/build-tools/34.0.0" ]; then
+            echo "Installing build-tools;34.0.0..."
+            "$SDKMANAGER" "build-tools;34.0.0"
+          else
+            echo "build-tools;34.0.0 is already preinstalled."
+          fi
 
       - name: Set up Gradle 8.5
         uses: gradle/actions/setup-gradle@v3
@@ -46,7 +68,7 @@ jobs:
             exit 1
           fi
           cd "$PROJECT_DIR"
-          echo "Building LiquidGlassTV from directory: $(pwd)"
+          echo "Building LiquidGlassTV in directory: $(pwd)"
           gradle assembleDebug --stacktrace
 
       - name: Upload Debug APK Artifact
