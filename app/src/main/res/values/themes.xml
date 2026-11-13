@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LiquidGlassTV" parent="Theme.AppCompat.NoActionBar">
+        <!-- Fullscreen Leanback Experience -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/bg_ambient_gradient</item>
+        <item name="android:colorBackground">@color/bg_ambient_start</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+</resources>

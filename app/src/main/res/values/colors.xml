@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Liquid Glass Palette -->
+    <color name="glass_fill_default">#18FFFFFF</color>
+    <color name="glass_fill_focused">#38FFFFFF</color>
+    <color name="glass_stroke_default">#26FFFFFF</color>
+    <color name="glass_stroke_focused">#99FFFFFF</color>
+    <color name="glass_dock_fill">#20101524</color>
+    <color name="glass_dock_stroke">#33FFFFFF</color>
+    <color name="glass_highlight">#4DFFFFFF</color>
+
+    <!-- Ambient Background -->
+    <color name="bg_ambient_start">#0B0F19</color>
+    <color name="bg_ambient_center">#141B2D</color>
+    <color name="bg_ambient_end">#080A10</color>
+
+    <!-- Text & UI -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="accent_blue">#38BDF8</color>
+    <color name="accent_glow">#60A5FA</color>
+    <color name="status_green">#4ADE80</color>
+    <color name="status_disconnected">#EF4444</color>
+</resources>

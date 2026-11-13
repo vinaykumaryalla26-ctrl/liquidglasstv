@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen Paddings for Android TV Overscan -->
+    <dimen name="tv_overscan_horizontal">48dp</dimen>
+    <dimen name="tv_overscan_top">32dp</dimen>
+    <dimen name="tv_overscan_bottom">24dp</dimen>
+
+    <!-- Liquid Glass Corners & Strokes -->
+    <dimen name="glass_card_corner">20dp</dimen>
+    <dimen name="glass_dock_corner">28dp</dimen>
+    <dimen name="glass_pill_corner">24dp</dimen>
+    <dimen name="glass_stroke_width">1.5dp</dimen>
+    <dimen name="glass_stroke_width_focused">2dp</dimen>
+
+    <!-- App Card Dimensions (4-column grid on 1080p) -->
+    <dimen name="app_card_width">210dp</dimen>
+    <dimen name="app_card_height">130dp</dimen>
+    <dimen name="app_icon_size">56dp</dimen>
+
+    <!-- Dock Dimensions (Bottom 4-app bar) -->
+    <dimen name="dock_height">86dp</dimen>
+    <dimen name="dock_item_size">66dp</dimen>
+    <dimen name="dock_icon_size">44dp</dimen>
+</resources>

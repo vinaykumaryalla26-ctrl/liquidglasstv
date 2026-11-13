@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer glass glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_card_corner" />
+            <gradient
+                android:angle="270"
+                android:startColor="#45FFFFFF"
+                android:centerColor="#25FFFFFF"
+                android:endColor="#18FFFFFF" />
+            <stroke
+                android:width="@dimen/glass_stroke_width_focused"
+                android:color="@color/glass_stroke_focused" />
+        </shape>
+    </item>
+
+    <!-- Top glass edge highlight sheen -->
+    <item
+        android:top="1dp"
+        android:left="12dp"
+        android:right="12dp"
+        android:bottom="124dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <gradient
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#80FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

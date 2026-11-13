@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base dark translucent glass body -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_dock_corner" />
+            <solid android:color="@color/glass_dock_fill" />
+        </shape>
+    </item>
+
+    <!-- Frosted specular gradient & boundary stroke -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_dock_corner" />
+            <gradient
+                android:angle="270"
+                android:startColor="#26FFFFFF"
+                android:centerColor="#10FFFFFF"
+                android:endColor="#05FFFFFF" />
+            <stroke
+                android:width="@dimen/glass_stroke_width"
+                android:color="@color/glass_dock_stroke" />
+        </shape>
+    </item>
+
+    <!-- Top specular highlight line simulating curved light reflection -->
+    <item
+        android:top="1dp"
+        android:left="16dp"
+        android:right="16dp"
+        android:bottom="82dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+            <gradient
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#40FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

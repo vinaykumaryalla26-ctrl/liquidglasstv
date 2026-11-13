@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LiquidGlass TV</string>
+    <string name="input_source">Inputs</string>
+    <string name="wifi_connected">Connected</string>
+    <string name="wifi_disconnected">Disconnected</string>
+    <string name="all_apps_title">Applications</string>
+    <string name="dock_title">Favorites</string>
+    <string name="select_input_title">Select Input Source</string>
+    <string name="input_hdmi1">HDMI 1</string>
+    <string name="input_hdmi2">HDMI 2 (ARC)</string>
+    <string name="input_hdmi3">HDMI 3</string>
+    <string name="input_av">AV Input</string>
+    <string name="app_launch_failed">Unable to launch application</string>
+</resources>

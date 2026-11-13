@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_card_corner" />
+            <gradient
+                android:angle="270"
+                android:startColor="#22FFFFFF"
+                android:endColor="#0DFFFFFF" />
+            <stroke
+                android:width="@dimen/glass_stroke_width"
+                android:color="@color/glass_stroke_default" />
+        </shape>
+    </item>
+</layer-list>
